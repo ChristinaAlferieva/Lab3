@@ -100,3 +100,16 @@ function searchMobile(){
         }
     }
 }
+
+sortButton.addEventListener("click", function(){
+    var contactSorted = contact.sort((a, b) => (a.name > b.name) ? sorting : -1*sorting);
+    sorting*=-1;
+    var trs = table.querySelectorAll("tr");
+
+    for(var i=0; i<contactSorted.length; i++){
+        var tds = trs[i].querySelectorAll("td");
+        tds[0].innerHTML = contactSorted[i].name;
+        tds[1].innerHTML = contactSorted[i].mobile;
+        tds[2].innerHTML = contactSorted[i].email;
+    }
+})
