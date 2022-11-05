@@ -6,7 +6,7 @@ const error = document.querySelector("#error");
 const table = document.querySelector("#table_summary tbody");
 const sortButton = document.querySelector("#tableHeader");
 const input = document.getElementById("contact_search");
-const filter = input.ariaValueMax.toUpperCase();
+const filter = input.value.toUpperCase();
 const tr = table.getElementsByTagName("tr");
 const letter = /^[A-Za-z]+$/;
 
@@ -101,6 +101,7 @@ function searchMobile(){
     }
 }
 
+/*
 sortButton.addEventListener("click", function(){
     var contactSorted = contact.sort((a, b) => (a.name > b.name) ? sorting : -1*sorting);
     sorting*=-1;
@@ -113,3 +114,4 @@ sortButton.addEventListener("click", function(){
         tds[2].innerHTML = contactSorted[i].email;
     }
 })
+*/
