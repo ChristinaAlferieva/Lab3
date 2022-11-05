@@ -11,44 +11,38 @@
 		<header>
 			<h1>Phone Directory<h1>
 		</header>
-		<div class="add_contact">
-			<form>
-				<div>
-					<label for="name">Contact Name</label>
-					<input id="name" type="text" maxlength="20" required>
-				</div>
-				<div>
-					<label for="mobile">Mobile Number</label>
-					<input id="mobile" type="tel" maxlength="10" required>
-				</div>
-				<div>
-					<label for="email">Email</label>
-					<input id="email" type="email" maxlength="40" required>
-				</div>	
-				<div>
-					<button>Add Contact</button>
-				</div>
+
+		<div class="new_contact">
+			<input id="name" type="text" value="" placeholder="Contact Name" maxlength="20"/>
+			<input id="mobile" type="mobile" value="" placeholder="Mobile Number" maxlength="10"/>
+			<input id="email" type="email" value="" placeholder="Email" maxlength="39"/>
+			<input class="btn" id="add" type="submit" value="Add Contact"/>
+			<div id="error">No empty fields are allowed!</div>
 		</div>
 		
-		<div class="search_contact">
-			<label for="contact_search">Search contact by Mobile No: </label>
-			<input type="search" id="contact_search" name="contact_search">
+		<div class="search_mobile">
+			<text for="contact_search">Search contact by Mobile No: </text>
+			<input id="contact_search" type="search"  onkeyup="searchMobile()">
 		</div>
 		
-		<div class="contact_display">
+		<div class="contact_summary">
 			<h2>Contacts Summary</h2>
-			<table>
-				<tr id="head">
-					<thead>
-						<th>Name</th>
+			<table id="table_summary">
+				<thead>
+					<tr>
+						<th id="tableHeader">Name</th>
 						<th>Mobile</th>
 						<th>Email</th>
-					</thead>
-				</tr>
-				<tbody id="data">
-				
+					</tr>
+				</thead>
+			
+				<tbody>
+					<tr>
+
+					</tr>
 				<tbody>
 			</table>
+			<div id="noResult">There were no results found!</div>
 		</div>
 		
 		<script src="site.js"></script>
