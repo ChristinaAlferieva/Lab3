@@ -57,3 +57,46 @@ addButton.addEventListener("click", function(){
         }
     }
 })
+
+function createCell(value){
+    var node = document.createTextNode(value);
+    var column = document.createElement("td");
+    column.appendChild(node);
+    return column;
+}
+
+function insertDetails(name, mobile, email){
+    var row = document.createElement("tr");
+
+    row.appendChild(createCell(name));
+    row.appendChild(createCell(mobile));
+    row.appendChild(createCell(email));
+    table.appendChild(row);
+    index += 1;
+
+    var userDetails = {
+                    name: name,
+                    mobile: mobile,
+                    email: email};
+
+    contact.push(userDetails);
+}
+
+function searchMobile(){
+    var input, table, tr, filter, i, value;
+
+    for(i=0; i<tr.length; i++){
+        contact = tr[i].getElementsByTagName("contact")[0];
+
+        if(contact){
+            value = contact.textContent || contact.innerText;
+
+            if(value.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display = "";
+            }
+            else{
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
