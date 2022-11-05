@@ -13,17 +13,17 @@ fetch('http://jsonplaceholder.typicode.com/posts')
 .then((response) => response.json())
 .then((json) => json.forEach( (element) => {wordFrequency(element.title)}));
 
-var frequencyMap = {};
+var freqMap = {};
 
 function wordFrequency(string) {
 	var body = string.replace(/[.]/g, ' ').split(/\s/);
 	
 	body.forEach(function(postsBody){
-		if(!frequencyMap[postsBody]){
-			frequencyMap[postsBody] = 0;
+		if(!freqMap[postsBody]){
+			freqMap[postsBody] = 0;
 		}
-		frequencyMap[postsBody] += 1;
+		freqMap[postsBody] += 1;
 	});	
 }
 
-console.log(frequencyMap);
+console.log(freqMap);
