@@ -43,3 +43,17 @@ function validateInput(name, mobile, email){
         return true;
     }
 }
+
+addButton.addEventListener("click", function(){
+    if(!email.validity.valid){
+        error.innerHTML = "Invalid email address!";
+    }
+    else if(!mobile.validity.valid){
+        error.innerHTML = "The mobile number should contain numbers only!";
+    }
+    else{
+        if(validateInput(name.value, mobile.value, email.value)){
+            insertDetails(name.value, mobile.value, email.value);
+        }
+    }
+})
