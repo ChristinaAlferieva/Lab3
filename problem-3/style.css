@@ -22,13 +22,13 @@ button {
 }
 
 table{
-    border: 0.5px solid;
+    border: 1px solid #ccc;
     text-align: left;
     width: 80%;
 }
 
 th{
-    border: 1.2px solid;
+    border: 1px solid #ccc;
     padding: 10px 60px;
 }
 
@@ -42,6 +42,11 @@ select {
     width: 80%;
 }
 
-.scroll {
-    border-radius: 10px;
+/* scrollable list if number exceeds 5 */
+.scrollList {
+    padding: 3px;
+    width: 90%;
+    height: 450px;
+    overflow: scroll;
+    border: 1px solid #ccc;
 }

@@ -29,9 +29,6 @@ form.addEventListener('submit', function(getData){
 
             let html = "";
 
-            html += `<h3>User Repos</h3>
-            <div class="scroll"></div>`
-
             //Gets the name and description of the user repo
             json.forEach(element => {
                 console.log('Name:', element.name);
