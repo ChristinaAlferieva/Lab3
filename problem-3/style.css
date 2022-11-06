@@ -24,6 +24,7 @@ button {
 table{
     border: 0.5px solid;
     text-align: left;
+    width: 80%;
 }
 
 th{
@@ -40,4 +41,8 @@ td{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+}
+
+select {
+    width: 80%;
 }

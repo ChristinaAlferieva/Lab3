@@ -16,18 +16,22 @@ form.addEventListener('submit', function(getData){
         document.getElementById("email").innerHTML = `<label>Email:    </label>${json.email}`;
         document.getElementById("location").innerHTML = `<label>Location:    </label>${json.location}`;
         document.getElementById("gists").innerHTML = `<label>Number of Gists:    </label>${json.public_gists}`;
-        
-        const reposUrl = `${json.repos_url}`;
-
-        fetch(reposUrl)
-        .then((response) => response.json())
-        .then((json) => {
-            console.log(json)
-
-            document.getElementById("userRepos").innerHTML = `${json.full_name}`;
-        })
                 
-    })
+    });
 
+    const reposUrl = `${json.repos_url}`;
+
+    fetch(reposUrl)
+    .then((response) => response.json())
+    .then((json) => {
+        console.log(json);
+
+        // json.forEach(element => {
+            //document.getElementById("reponame").innerHTML =  `${json.name}`;
+        // })
+        //document.getElementById("userRepos").innerHTML = `${json.full_name}`;
+        
+
+    })
 
 })

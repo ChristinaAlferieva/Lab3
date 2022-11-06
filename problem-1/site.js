@@ -17,6 +17,7 @@ var contact = [];
 error.innerHTML = "";
 noResult.innerHTML = "";
 
+//Function that validates all the user contact details
 function validateInput(name, mobile, email){
     if(name.length == 0){
         error.innerHTML = "Please enter the name!";
@@ -44,6 +45,7 @@ function validateInput(name, mobile, email){
     }
 }
 
+//Function that validates the email and mobile once the button is clicked
 addButton.addEventListener("click", function(){
     if(!email.validity.valid){
         error.innerHTML = "Invalid email address!";
@@ -58,6 +60,7 @@ addButton.addEventListener("click", function(){
     }
 })
 
+//Function to insert and create the table
 function createCell(value){
     var node = document.createTextNode(value);
     var column = document.createElement("td");
@@ -65,6 +68,7 @@ function createCell(value){
     return column;
 }
 
+//Function to insert all the contact details
 function insertDetails(name, mobile, email){
     var row = document.createElement("tr");
 
@@ -82,6 +86,7 @@ function insertDetails(name, mobile, email){
     contact.push(userDetails);
 }
 
+//Function to search for a mobile number
 function searchMobile(){
     var input, table, tr, filter, i, value;
 
@@ -102,6 +107,7 @@ function searchMobile(){
 }
 
 /*
+//Function to sort the list into ascending/descending order
 sortButton.addEventListener("click", function(){
     var contactSorted = contact.sort((a, b) => (a.name > b.name) ? sorting : -1*sorting);
     sorting*=-1;
