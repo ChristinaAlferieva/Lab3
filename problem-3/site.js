@@ -26,25 +26,15 @@ form.addEventListener('submit', function(getData){
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
-    
+
             //Gets the name and description of the user repo
             json.forEach(element => {
-               console.log('Name:', element.name);
-               console.log('Description:', element.description);
-               
-               document.getElementById("reponame").innerHTML = `<label>Name:    </label>${element.name}`;
-               document.getElementById("repodescription").innerHTML = `<label>Description:    </label>${element.description}`;
-         });
-    
-            // json.forEach(element => {
-                //document.getElementById("reponame").innerHTML =  `${json.name}`;
-            // })
-            //document.getElementById("userRepos").innerHTML = `${json.full_name}`;
-    
-    
-        })
+                console.log('Name:', element.name);
+                console.log('Description:', element.description);
+
+                document.getElementById("reponame").innerHTML = `<label>Name:    </label>${element.name}`;
+                document.getElementById("repodescription").innerHTML = `<label>Description:    </label>${element.description}`;
+            });
+        });
     });
-
-  
-
-})
+});

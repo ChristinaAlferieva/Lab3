@@ -32,17 +32,9 @@ th{
     padding: 10px 60px;
 }
 
-td{
-    border: 1.2px solid;
-    padding: 0px 5px;
-}
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 0px;
 }
 
-select {
-    width: 80%;
-}
