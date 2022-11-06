@@ -38,3 +38,10 @@ th{
     grid-gap: 0px;
 }
 
+select {
+    width: 80%;
+}
+
+.scroll {
+    border-radius: 10px;
+}

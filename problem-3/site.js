@@ -27,14 +27,27 @@ form.addEventListener('submit', function(getData){
         .then((json) => {
             console.log(json);
 
+            let html = "";
+
+            html += `<h3>User Repos</h3>
+            <div class="scroll"></div>`
+
             //Gets the name and description of the user repo
             json.forEach(element => {
                 console.log('Name:', element.name);
                 console.log('Description:', element.description);
 
-                document.getElementById("reponame").innerHTML = `<label>Name:    </label>${element.name}`;
-                document.getElementById("repodescription").innerHTML = `<label>Description:    </label>${element.description}`;
+                html += `
+                    <div id="repoDetails">
+                        <div id="reponame"><label><b>Name: </b></label>${element.name}</div>
+                        <div id="repodescription"><label><b>Description: </b> </label>${element.description}</div>
+                    </div>
+                `
             });
+
+            let repositorySetup = document.getElementById("repoContainer");
+            repositorySetup.innerHTML = html;
         });
+      
     });
 });
